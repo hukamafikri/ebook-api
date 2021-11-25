@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +16,13 @@ use App\Http\Controllers\AuthController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/me',[AuthController::class, 'me']);
 
-
+Route::get('/me', function () {
+return [
+    "NIS" => 3103119099,
+    "Name" => "Hukama Fikri",
+    "Gender" => "Laki-laki",
+    "Phone" => 6281347324038,
+    "Class" => "XII RPL 3",
+];
+});
